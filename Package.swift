@@ -4,6 +4,18 @@
 import PackageDescription
 
 let package = Package(
+    ...
+    dependencies: [
+        ...
+        .package(name: "Aptabase", url: "https://github.com/aptabase/aptabase-swift.git", from: "0.3.4"),
+    ],
+    targets: [
+        .target(
+            name: "MyApp",
+            dependencies: ["Aptabase"] // Add as a dependency
+        )
+    ]
+) package = Package(
     name: "Aptabase",
     platforms: [
       .iOS(.v13),
